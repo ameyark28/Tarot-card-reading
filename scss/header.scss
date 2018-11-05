@@ -1,0 +1,83 @@
+header {
+  min-height: 97vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-one;
+  position: relative;
+  @media screen and (min-width: 1020px) and (max-width: 1460px)  {
+    min-height: 123vh
+  }
+  @media screen and (min-width: 2000px) {
+    min-height: 115vh;
+  }
+  .header-images {
+    width: 100%;
+    padding-top: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 2000px) {
+      padding-top: 10%;
+      margin-bottom: 2%
+    }
+    img {
+      margin: 3%;
+      height: 290px;
+      @media screen and (min-width: 2000px) {
+        height: 350px
+      }
+      &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+        height: 175px;
+        @media screen and (min-width: 2000px) {
+          height: 230px;
+        }
+      }
+    }
+  }
+  #show {
+    display: none;
+    height: 258.5px;
+    position: absolute;
+    bottom: -17%;
+    left: 38.5%;
+    z-index: 100;
+    @media screen and (min-width: 1430px) and (max-width: 1999px) {
+      left: 42%;
+      bottom: -15%;
+    }
+    @media screen and (min-width: 2000px) {
+      bottom: -11%;
+      left: 45%;
+    }
+  }
+  #line {
+    display: none;
+    -webkit-animation: flip-line 1s linear 1;
+    -webkit-perspective: 500px;
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    height: 150px;
+    width: 244px;
+    z-index: 5;
+    background-image: url("../img/card_back2.png");
+    background-size: cover;
+    @media screen and (min-width: 1430px) and (max-width: 1999px) {
+      left: 43%;
+    }
+    @media screen and (min-width: 2000px) {
+      top: 61%;
+      left: 43%;
+      height: 250px;
+      width: 408px;
+
+    }
+  }
+}
+
+@-webkit-keyframes flip-line {
+  0% { -webkit-transform:rotateX(90deg) ; }
+  90% { -webkit-transform:rotateX(170deg); }
+  100% { -webkit-transform: rotateX(190deg); }
+}

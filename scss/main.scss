@@ -1,0 +1,22 @@
+@import "normalize";
+@import "variables";
+@import "header";
+@import "form";
+@import "layout";
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+body {
+  background-color: $color-one;
+  font-family: 'Muli', sans-serif;
+  button img {
+    width: 220px;
+    z-index: 20;
+    @media screen and (min-width: 2000px) {
+      width: 250px;
+    }
+  }
+  .rotated {
+    transform: rotate(360deg);
+    transition-duration: 5s;
+  }
+}
